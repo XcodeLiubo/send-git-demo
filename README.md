@@ -216,11 +216,11 @@ NS_ASSUME_NONNULL_BEGIN
             tmp_task.data = model;
         }else{
             tmp_task =  [GiftTask task_giftdata:model];
+            [self.tasks addObject:tmp_task];            // 入队
         }
         tmp_task;
     });
 
-    [self.tasks addObject:new_task];            // 入队
 
     new_task.cbk = [self make_task_cbk];
 
